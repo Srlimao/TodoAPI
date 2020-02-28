@@ -1,0 +1,11 @@
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\bin\Debug\netcoreapp3.1\TesteApiCalls.exe
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\bin\Debug\netcoreapp3.1\TesteApiCalls.deps.json
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\bin\Debug\netcoreapp3.1\TesteApiCalls.runtimeconfig.json
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\bin\Debug\netcoreapp3.1\TesteApiCalls.runtimeconfig.dev.json
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\bin\Debug\netcoreapp3.1\TesteApiCalls.dll
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\bin\Debug\netcoreapp3.1\TesteApiCalls.pdb
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\obj\Debug\netcoreapp3.1\TesteApiCalls.csprojAssemblyReference.cache
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\obj\Debug\netcoreapp3.1\TesteApiCalls.AssemblyInfoInputs.cache
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\obj\Debug\netcoreapp3.1\TesteApiCalls.AssemblyInfo.cs
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\obj\Debug\netcoreapp3.1\TesteApiCalls.dll
+C:\Users\will_\source\repos\TodoAPI\TesteApiCalls\obj\Debug\netcoreapp3.1\TesteApiCalls.pdb

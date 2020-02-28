@@ -1,46 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace TodoAPI.Controllers
 {
+    public class TodoStruct
+    {
+        public string Title { get; set; }
+        public DateTime DueDate{ get; set; }
+    }
+
     [Route("api/[controller]")]
     [ApiController]
     public class TodoController : ControllerBase
     {
         // GET: api/Todo
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/Todo/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
+            return JsonSerializer.Serialize(TodosManager.ListItems());
         }
 
         // POST: api/Todo
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] TodoStruct item)
         {
+            TodosManager.AddItem(item.Title,item.DueDate);
         }
 
-        // PUT: api/Todo/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPatch]
+        public void SetCheck([FromQuery] string title,bool check)
         {
+            TodosManager.SetCheckItem(title, check);
         }
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public void Remove([FromQuery] string title)
         {
+            TodosManager.RemoveItem(title);
         }
+
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace TodoAPI
 {
@@ -9,23 +7,26 @@ namespace TodoAPI
     {
         static List<TodoItem> todos = new List<TodoItem>();
 
-        public static void AddItem(string title)
+        public static void AddItem(string title,DateTime dueDate = new DateTime())
         {
             TodoItem todo = new TodoItem();
             todo.Title = title;
             todo.IsChecked = false;
-            todo.DueDate = DateTime.Now;//todo
+            todo.DueDate = dueDate;//todo
+            todos.Add(todo);
 
         }
 
         public static void RemoveItem(string title)
         {
-
+            todos.RemoveAll(x => x.Title == title);
         }
 
-        public static void SetCheckItem(bool check)
+        public static void SetCheckItem(string title,bool check)
         {
-
+            TodoItem todo = todos.Find(x => x.Title == title);
+            if (todo == null) return;
+            todo.IsChecked = check;
         }
 
         public static List<TodoItem> ListItems()
